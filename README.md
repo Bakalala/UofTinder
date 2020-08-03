@@ -3,11 +3,18 @@
 
 Our idea is to create a dating app specifically catered to university students. The idea is to experiment with different methods and see what works best
 
-## Things  to Implement
+## Things to Implement
 
-1. Database
-2. Front end
-3. Backend 
+Focus on simplicity
+
+1. In-app messaging
+2. Swiping
+3. Filters
+4. Login
+5. Authentication ?
+6. First date ideas
+7. Suggesting matches
+8. Push notifications
 
 
 ## Contributors
@@ -18,3 +25,7 @@ Ali Seifeldin
 ## License
 
 Do we need one ?
+
+## Resources
+
+https://www.iosapptemplates.com/tinder-clone-ios-swift
