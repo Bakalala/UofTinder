@@ -1,0 +1,24 @@
+{
+  "name": "uoftinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bakalala/UofTinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bakalala/UofTinder/issues"
+  },
+  "homepage": "https://github.com/Bakalala/UofTinder#readme"
+}
