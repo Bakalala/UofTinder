@@ -30,3 +30,6 @@ Do we need one ?
 ## Resources
 
 https://www.iosapptemplates.com/tinder-clone-ios-swift
+
+https://www.youtube.com/watch?v=DQfeB_FKKkc
+^Tinder clone video
