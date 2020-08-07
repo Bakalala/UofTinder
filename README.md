@@ -33,3 +33,6 @@ https://www.iosapptemplates.com/tinder-clone-ios-swift
 
 https://www.youtube.com/watch?v=DQfeB_FKKkc
 ^Tinder clone video
+
+https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw
+^ Web Dev Tutorials
