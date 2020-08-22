@@ -15,7 +15,7 @@ Focus on simplicity
 6. First date ideas
 7. Suggesting matches
 8. Push notifications
-9. Same classes 
+9. Same classes
 
 
 ## Contributors
