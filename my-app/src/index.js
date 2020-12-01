@@ -1,24 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-
-// Initialize Firebase
-var firebase = require("firebase/app");
-require("firebase/auth");
-
-// Your web app's Firebase configuration
-var firebaseConfig = {
-  apiKey: "AIzaSyDIE2bQq5VnLks-c3sIW5O-YEQghUb_5dw",
-  authDomain: "uoftinder.firebaseapp.com",
-  databaseURL: "https://uoftinder.firebaseio.com",
-  projectId: "uoftinder",
-  storageBucket: "uoftinder.appspot.com",
-  messagingSenderId: "169113743182",
-  appId: "1:169113743182:web:4fa5174b1ef88e3452781f",
-  measurementId: "G-J686RH1BBL",
-};
-
-firebase.initializeApp(firebaseConfig);
+import firebase from "./fire.js";
 
 // const Welcome = ({ user, onSignOut }) => {
 //   // This is a dumb "stateless" component
@@ -81,12 +64,35 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     // the initial application state
-    this.logedIn = false;
+    this.state = {
+      user: {},
+    };
+  }
+
+  componentDidMount() {
+    this.authListener();
+  }
+
+  authListener() {
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        this.setState({ user });
+        // var displayName = user.displayName;
+        // var email = user.email;
+        // var emailVerified = user.emailVerified;
+        // var photoURL = user.photoURL;
+        // var isAnonymous = user.isAnonymous;
+        // var uid = user.uid;
+        // var providerData = user.providerData;
+      } else {
+        this.setState({ user: null });
+      }
+    });
   }
 
   // App "actions" (functions that modify state)
   signUp(username, password) {
-    // This is where you would call Firebase, an API etc...
+    // This is where you would call firebasebase, an API etc...
     // calling setState will re-render the entire app (efficiently!)
     firebase
       .auth()
@@ -95,6 +101,7 @@ class App extends React.Component {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        console.log(error.code);
         console.log(error.message);
         // ...
       });
@@ -106,9 +113,9 @@ class App extends React.Component {
       .signInWithEmailAndPassword(username, password)
       .catch(function (error) {
         // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(error.message);
+        // var errorCode = error.code;
+        // var errorMessage = error.message;
+        // console.log(error.message);
         // ...
       });
   }
