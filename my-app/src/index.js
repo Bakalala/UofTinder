@@ -40,7 +40,7 @@ class LoginForm extends React.Component {
 
 class SignupForm extends React.Component {
   // Using a class based component here because we're accessing DOM refs
-
+ls
   handleSignUp(e) {
     e.preventDefault();
     let username = this.refs.username.value;
