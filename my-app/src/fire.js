@@ -19,4 +19,5 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+// Need to export firebase to index.js
 export default firebase;
